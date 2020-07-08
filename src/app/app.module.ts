@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SliderComponent } from './slider/slider.component';
+import { SliderModule } from './slider/slider.module';
+import { HomeModule } from "./home/home.module";
 
 @NgModule({
   declarations: [
@@ -38,14 +40,15 @@ import { SliderComponent } from './slider/slider.component';
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    SliderModule,
+    HomeModule,
     RouterModule.forRoot([
-      // { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
       { path: 'free-training', component: FreeTrainingComponent },
       { path: 'resources', component: ResourcesComponent },
       { path: 'courses', component: CoursesComponent },
       { path: 'testing', component: TestingComponent },
-      { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
    ])

@@ -25,7 +25,7 @@ export class SliderComponent implements OnInit {
       },
       {
         'name': 'mobile',
-        'background': '../../assets/bg3.jpg',
+        'background': '../../assets/bg2.jpg',
         'floater': '../../assets/AwsCloud.png',
         'title': 'AWS Cloud Application Development',
           'subtitle': `The AWS Cloud Development Kit (AWS CDK) is an open source software
