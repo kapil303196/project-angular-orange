@@ -1,0 +1,22 @@
+<div>
+    <mdb-carousel class="carousel slide carousel-fade" [interval]="'5000'" [animation]="'slide'">
+      <mdb-carousel-item *ngFor="let screen of screensdata;">
+        <div class="view w-100">
+          <div class="d-block w-100 content-bg-bx" style="background-image:url('{{screen.background}}')" alt="First slide">
+            <div class="content-items-bx">
+              <div class="content-inner-bx">
+                <div class="carousel-caption-custom-first">
+                  <h3 class="h3-responsive">{{screen.title}}</h3>
+                  <p class="subtitle-responsive">{{screen.subtitle}}</p>
+                </div>
+                <div class="carousel-caption-custom-second">
+                  <img class="slider-icon-images" src='{{screen.floater}}'>
+                </div>
+                <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>

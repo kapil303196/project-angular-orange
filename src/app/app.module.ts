@@ -17,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -37,12 +39,13 @@ import { HomeComponent } from './home/home.component';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      // { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
       { path: 'free-training', component: FreeTrainingComponent },
       { path: 'resources', component: ResourcesComponent },
       { path: 'courses', component: CoursesComponent },
       { path: 'testing', component: TestingComponent },
+      { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
    ])
