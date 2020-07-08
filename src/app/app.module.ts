@@ -17,6 +17,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { SliderComponent } from './slider/slider.component';
+import { SliderModule } from './slider/slider.module';
+import { HomeModule } from "./home/home.module";
 
 @NgModule({
   declarations: [
@@ -29,13 +32,16 @@ import { HomeComponent } from './home/home.component';
     NotFoundComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    SliderModule,
+    HomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
