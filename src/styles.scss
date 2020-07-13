@@ -3,6 +3,26 @@
     background-color: #ff6000 !important;
 }
 
+.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+    width: 5.25rem !important;
+    height: 5.25rem !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
 .footer-copyright-bx {
     overflow: hidden;
     color: darkseagreen;
