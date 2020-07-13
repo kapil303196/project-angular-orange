@@ -77,7 +77,7 @@
 }
 
 .image-bx-new {
-    height: 250px;
+    // height: 250px;
     width: 300px; 
 }
 .heading-share-button {
@@ -117,7 +117,7 @@
     width: 100%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 .w-100 {
     width: 100% !important;
     height: 400px;
@@ -147,12 +147,15 @@
 
 @media (max-width: 1199px) {
 .heading-share {
-    min-width: 16rem;
     text-align: center;
 }
 
 .heading-share-button {
     vertical-align: top;
+}
+
+.image-bx-new {
+    width: 250px;
 }
 
 }
