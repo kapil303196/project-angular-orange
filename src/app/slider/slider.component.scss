@@ -18,10 +18,6 @@
     transition: opacity 0.15s ease;
 }
 
-.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
-    width: 5.25rem !important;
-    height: 5.25rem !important;
-}
 
 
 @media only screen and (max-width: 768px) {
@@ -146,7 +142,16 @@
 
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
     .image-bx-new {
-        width: 155px;
+        width: 325px;
+    }
+
+    .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+    }
+
+    .heading {
+        padding: 4rem 4rem;
     }
 }
 
