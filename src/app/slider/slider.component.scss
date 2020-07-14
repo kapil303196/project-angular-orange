@@ -66,7 +66,6 @@
 .heading-description {
     font-weight: 300;
     font-size: 22px;
-    text-align: justify;
     color: #fff;
 }
 .heading-share {
@@ -142,6 +141,13 @@
     padding-right: 50px;
 }
 
+
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .image-bx-new {
+        width: 155px;
+    }
 }
 
 
@@ -154,9 +160,6 @@
     vertical-align: top;
 }
 
-.image-bx-new {
-    width: 250px;
-}
 
 }
 
