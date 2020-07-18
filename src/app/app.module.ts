@@ -59,6 +59,11 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
       { path: 'resources', component: ResourcesComponent },
       { path: 'courses', component: CoursesComponent },
       { path: 'testing', component: TestingComponent },
+      { path: 'web-design', component: WebDesignComponent },
+      { path: 'mobile-app-development', component: MobileAppDevelopmentComponent },
+      { path: 'web-development', component: WebDevelopmentComponent },
+      { path: 'iot', component: IotComponent },
+      { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
    ])
