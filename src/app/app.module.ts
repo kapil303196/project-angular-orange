@@ -18,6 +18,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SliderComponent } from './slider/slider.component';
+import { CardsComponent } from './cards/cards.component';
+import { WebDesignComponent } from './web-design/web-design.component';
+import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
+import { WebDevelopmentComponent } from './web-development/web-development.component';
+import { IotComponent } from './iot/iot.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { SliderComponent } from './slider/slider.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SliderComponent
+    SliderComponent,
+    CardsComponent,
+    WebDesignComponent,
+    MobileAppDevelopmentComponent,
+    WebDevelopmentComponent,
+    IotComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +55,10 @@ import { SliderComponent } from './slider/slider.component';
       { path: 'resources', component: ResourcesComponent },
       { path: 'courses', component: CoursesComponent },
       { path: 'testing', component: TestingComponent },
+      { path: 'web-design', component: WebDesignComponent },
+      { path: 'mobile-app-development', component: MobileAppDevelopmentComponent },
+      { path: 'web-development', component: WebDevelopmentComponent },
+      { path: 'iot', component: IotComponent },
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },

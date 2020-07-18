@@ -14,16 +14,26 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {
     this.screensdata = [
       {
+        'id': '1',
         'name': 'mobile',
-        'background': '../../assets/bg7.jpg',
-        'floater': '../../assets/3.png',
-        'title': 'Mobile and IoT Development',
-            'subtitle': `IoT app development is the process of building IoT apps or software which
-              combine sensor data with machine learning technologies and predictive analytics to create smart and
-              proactive user experiences.`,
+        'background': '../../assets/bg10.jpg',
+        'floater': '../../assets/Angular.png',
+        'title': 'Angular 10 Development',
+          'subtitle': `Angular is a platform for building mobile and desktop web applications.`,
         'link': ''
       },
       {
+        'id': '2',
+        'name': 'mobile',
+        'background': '../../assets/bg11.jpg',
+        'floater': '../../assets/Nodejs.png',
+        'title': 'Node 12 Development',
+          'subtitle': `Node.js is an open-source, cross-platform, JavaScript runtime environment
+          that executes JavaScript code outside a web browser.`,
+        'link': ''
+      },
+      {
+        'id': '3',
         'name': 'mobile',
         'background': '../../assets/bg3.jpg',
         'floater': '../../assets/AwsCloud.png',
@@ -34,23 +44,18 @@ export class SliderComponent implements OnInit {
         'link': ''
       },
       {
+        'id': '4',
         'name': 'mobile',
-        'background': '../../assets/bg10.jpg',
-        'floater': '../../assets/Angular.png',
-        'title': 'Angular 10 Development',
-          'subtitle': `Angular is a platform for building mobile and desktop web applications.`,
+        'background': '../../assets/bg7.jpg',
+        'floater': '../../assets/3.png',
+        'title': 'Mobile and IoT Development',
+            'subtitle': `IoT app development is the process of building IoT apps or software which
+              combine sensor data with machine learning technologies and predictive analytics to create smart and
+              proactive user experiences.`,
         'link': ''
       },
       {
-        'name': 'mobile',
-        'background': '../../assets/bg11.jpg',
-        'floater': '../../assets/Nodejs.png',
-        'title': 'Node 12 Development',
-          'subtitle': `Node.js is an open-source, cross-platform, JavaScript runtime environment
-          that executes JavaScript code outside a web browser.`,
-        'link': ''
-      },
-      {
+        'id': '5',
         'name': 'mobile',
         'background': '../../assets/bg1.jpg',
         'floater': '../../assets/Training.png',
