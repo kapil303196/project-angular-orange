@@ -4,9 +4,14 @@
     text-align: left;
     border-radius: 6px;
 }
-
+.link-text{
+  color: black;
+  font-weight: 900;
+}
 .card-new {
     border-radius: 6px;
+    min-height: 350px;
+    background-image: linear-gradient(to right, #ff9887 , #ff8100);
 }
 
 * {
@@ -40,11 +45,13 @@
       font-size: 1rem;
       font-weight: 500;
       text-align: center;
+      color: white;
   }
 
   .card-text {
     font-size: 14px;
     font-weight: 400;
+    color: white;
   }
 
   .card-img-top {
