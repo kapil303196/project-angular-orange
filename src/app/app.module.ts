@@ -23,6 +23,8 @@ import { WebDesignComponent } from './web-design/web-design.component';
 import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
 import { WebDevelopmentComponent } from './web-development/web-development.component';
 import { IotComponent } from './iot/iot.component';
+import { SliderModule } from './slider/slider.module';
+import { HomeModule } from "./home/home.module";
 
 @NgModule({
   declarations: [
@@ -48,8 +50,10 @@ import { IotComponent } from './iot/iot.component';
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    SliderModule,
+    HomeModule,
     RouterModule.forRoot([
-      // { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
       { path: 'free-training', component: FreeTrainingComponent },
       { path: 'resources', component: ResourcesComponent },

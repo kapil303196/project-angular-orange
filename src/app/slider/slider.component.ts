@@ -35,8 +35,8 @@ export class SliderComponent implements OnInit {
       {
         'id': '3',
         'name': 'mobile',
-        'background': '../../assets/bg3.jpg',
-        'floater': '../../assets/AwsCloud.png',
+        'background': '../../assets/CarouselCloudBackground.jpg',
+        'floater': '../../assets/CarouselCloudFloating.png',
         'title': 'AWS Cloud Application Development',
           'subtitle': `The AWS Cloud Development Kit (AWS CDK) is an open source software
             development framework to model and provision your cloud application resources using familiar
@@ -57,8 +57,8 @@ export class SliderComponent implements OnInit {
       {
         'id': '5',
         'name': 'mobile',
-        'background': '../../assets/bg1.jpg',
-        'floater': '../../assets/Training.png',
+        'background': '../../assets/CarouselTrainingBackground.jpg',
+        'floater': '../../assets/CarouselTrainingFloating.png',
         'title': 'Training',
           'subtitle': `Training is teaching, or developing in oneself or others, any skills and
           knowledge or fitness that relate to specific useful competencies. Training has specific goals of

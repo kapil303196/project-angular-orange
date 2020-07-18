@@ -1,0 +1,179 @@
+/* You can add global styles to this file, and also import other style files */
+.unique-orange-color {
+    background-color: #ff6000 !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+.carousel-control-prev, .carousel-control-next {
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    text-decoration: none;
+    opacity: .8;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: opacity .2s ease-in;
+}
+
+.carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.w-100 {
+    height: auto;
+}
+
+}
+
+
+.heading {
+    padding: 4rem 7rem;
+}
+.heading-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-size: 36px;
+}
+.heading-title strong {
+    color: #fff;
+    font-weight: 500;
+}
+.heading-description {
+    font-weight: 300;
+    font-size: 22px;
+    color: #fff;
+}
+.heading-share {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-bx-new {
+    // height: 250px;
+    width: 360px; 
+}
+.heading-share-button {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+.heading-share-button:before {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #622369;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+.w-100 {
+    width: 100% !important;
+    height: 400px;
+}
+
+.heading {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 400px;
+}
+
+.heading-content {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    padding-right: 50px;
+}
+
+
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .image-bx-new {
+        width: 260px;
+    }
+
+    .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+    }
+
+    .heading {
+        padding: 4rem 4rem;
+    }
+}
+
+
+@media (max-width: 1199px) {
+.heading-share {
+    text-align: center;
+}
+
+.heading-share-button {
+    vertical-align: top;
+}
+
+
+}
+
+
+@media (min-width: 1200px) {
+.heading-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+}
