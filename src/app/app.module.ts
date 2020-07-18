@@ -20,6 +20,11 @@ import { HomeComponent } from './home/home.component';
 import { SliderComponent } from './slider/slider.component';
 import { SliderModule } from './slider/slider.module';
 import { HomeModule } from "./home/home.module";
+import { CardsComponent } from './cards/cards.component';
+import { IotComponent } from './iot/iot.component';
+import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
+import { WebDesignComponent } from './web-design/web-design.component';
+import { WebDevelopmentComponent } from './web-development/web-development.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { HomeModule } from "./home/home.module";
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SliderComponent
+    SliderComponent,
+    CardsComponent,
+    IotComponent,
+    MobileAppDevelopmentComponent,
+    WebDesignComponent,
+    WebDevelopmentComponent
   ],
   imports: [
     BrowserModule,
