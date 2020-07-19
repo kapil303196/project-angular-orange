@@ -1,41 +1,109 @@
-.cards-content-bx {
-    margin: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    text-align: left;
-    border-radius: 6px;
+// .cards-content-bx {
+//     margin: 20px;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+//     text-align: left;
+//     border-radius: 6px;
+// }
+// .link-text{
+//   color: black;
+//   font-weight: 900;
+// }
+// .card-new {
+//     border-radius: 6px;
+//     min-height: 350px;
+//     background-image: linear-gradient(to right, #ff9887 , #ff8100);
+// }
+
+// * {
+//     box-sizing: border-box;
+//   }
+
+//   body {
+//     font-family: Arial, Helvetica, sans-serif;
+//   }
+
+//   /* Float four columns side by side */
+//   .column {
+//     float: left;
+//     width: 25%;
+//     padding: 0 10px;
+//   }
+
+//   /* Remove extra left and right margins, due to padding in columns */
+//   .row {
+//     margin: 2% 10%;
+//   }
+
+//   /* Clear floats after the columns */
+//   .row:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+
+//   .card-title {
+//       font-size: 1rem;
+//       font-weight: 500;
+//       text-align: center;
+//       color: white;
+//   }
+
+//   .card-text {
+//     font-size: 14px;
+//     font-weight: 400;
+//     color: white;
+//   }
+
+//   .card-img-top {
+//     position: relative;
+//     display: block;
+//     width: auto;
+//     height: auto;
+//     /* display: block; */
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: 10px;
+//     /* width: 50%; */
+//     /* text-align: center; */
+//   }
+
+//   /* Responsive columns - one column layout (vertical) on small screens */
+//   @media screen and (max-width: 600px) {
+//     .column {
+//       width: 100%;
+//       display: block;
+//       margin-bottom: 20px;
+//     }
+//   }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.card-new {
-    border-radius: 6px;
+.margin {
+  margin: 1em 1em 1em 0;
 }
-
-* {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  /* Float four columns side by side */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {
-    margin: 2% 10%;
-  }
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
+.card {
+  // width: 23%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  border-radius: 15px;
+  min-height: 350px;
+  min-width: 250px;
+  max-width: 250px;
+}
+.card-img-top {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  /* width: 50%; */
+  /* text-align: center; */
+}
   .card-title {
       font-size: 1rem;
       font-weight: 500;
@@ -45,26 +113,11 @@
   .card-text {
     font-size: 14px;
     font-weight: 400;
+    text-align: center;
   }
-
-  .card-img-top {
-    position: relative;
-    display: block;
-    width: auto;
-    height: auto;
-    /* display: block; */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    /* width: 50%; */
-    /* text-align: center; */
-  }
-
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  } 
+  .link-text{
+  color: orange;
+  font-weight: 900;
+  text-align: center;
+  align-self: flex-end;
+}

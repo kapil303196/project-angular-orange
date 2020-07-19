@@ -1,82 +1,123 @@
-<div class="row">
-    <div class="column">
-        <div class="cards-content-bx">
-            <div class="card ovf-hidden card-new">
-                <div class="view overlay" (click)="changeView('webdesign')">
-                    <img class="card-img-top" src="../../assets/website-design.png" alt="Card image cap">
-                    <a>
-                        <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Web Design</h5>
-                    <hr>
-                    <p class="card-text">Web Design Services</p>
-                    <a routerLink="/web-design" class="link-text">
-                        <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
-                    </a>
-                </div>
-            </div>
+<!-- <div class="row">
+  <div class="column">
+    <div class="cards-content-bx">
+      <div class="card ovf-hidden card-new">
+        <div class="view overlay" (click)="changeView('webdesign')">
+          <img
+            class="card-img-top"
+            src="../../assets/website-design.png"
+            alt="Card image cap"
+          />
+          <a>
+            <div class="mask waves-effect waves-light rgba-white-slight"></div>
+          </a>
         </div>
-    </div>
-    <div class="column">
-        <div class="cards-content-bx">
-            <div class="card ovf-hidden card-new">
-                <div class="view overlay" (click)="changeView('mobileappdevelopment')">
-                    <img class="card-img-top" src="../../assets/app-development.png" alt="Card image cap">
-                    <a>
-                        <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Mobile App Development</h5>
-                    <hr>
-                    <p class="card-text">Mobile App Development Services</p>
-                    <a routerLink="/mobile-app-development" class="link-text">
-                        <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
-                    </a>
-                </div>
-            </div>
+        <div class="card-body">
+          <h5 class="card-title">Web Design</h5>
+          <hr />
+          <p class="card-text">Web Design Services</p>
+          <a routerLink="/web-design" class="link-text">
+            <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
+          </a>
         </div>
+      </div>
     </div>
-    <div class="column">
-        <div class="cards-content-bx">
-            <div class="card ovf-hidden card-new">
-                <div class="view overlay" (click)="changeView('webdevelopment')">
-                    <img class="card-img-top" src="../../assets/code.png" alt="Card image cap">
-                    <a>
-                        <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Web Development</h5>
-                    <hr>
-                    <p class="card-text">Web Development Services</p>
-                    <a routerLink="/web-development" class="link-text">
-                        <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
-                    </a>
-                </div>
-            </div>
+  </div>
+  <div class="column">
+    <div class="cards-content-bx">
+      <div class="card ovf-hidden card-new">
+        <div class="view overlay" (click)="changeView('mobileappdevelopment')">
+          <img
+            class="card-img-top"
+            src="../../assets/app-development.png"
+            alt="Card image cap"
+          />
+          <a>
+            <div class="mask waves-effect waves-light rgba-white-slight"></div>
+          </a>
         </div>
-    </div>
-    <div class="column">
-        <div class="cards-content-bx">
-            <div class="card ovf-hidden card-new">
-                <div class="view overlay" (click)="changeView('iot')">
-                    <img class="card-img-top" src="../../assets/iot-card.png" alt="Card image cap">
-                    <a>
-                        <div class="mask waves-effect waves-light rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">IOT</h5>
-                    <hr>
-                    <p class="card-text">IOT Services</p>
-                    <a routerLink="/iot" class="link-text">
-                        <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
-                    </a>
-                </div>
-            </div>
+        <div class="card-body">
+          <h5 class="card-title">Mobile App Development</h5>
+          <hr />
+          <p class="card-text">Mobile App Development Services</p>
+          <a routerLink="/mobile-app-development" class="link-text">
+            <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
+          </a>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="column">
+    <div class="cards-content-bx">
+      <div class="card ovf-hidden card-new">
+        <div class="view overlay" (click)="changeView('webdevelopment')">
+          <img
+            class="card-img-top"
+            src="../../assets/code.png"
+            alt="Card image cap"
+          />
+          <a>
+            <div class="mask waves-effect waves-light rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <hr />
+          <p class="card-text">Web Development Services</p>
+          <a routerLink="/web-development" class="link-text">
+            <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="cards-content-bx">
+      <div class="card ovf-hidden card-new">
+        <div class="view overlay" (click)="changeView('iot')">
+          <img
+            class="card-img-top"
+            src="../../assets/iot-card.png"
+            alt="Card image cap"
+          />
+          <a>
+            <div class="mask waves-effect waves-light rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">IOT</h5>
+          <hr />
+          <p class="card-text">IOT Services</p>
+          <a routerLink="/iot" class="link-text">
+            <h6>Read more <i class="fas fa-angle-double-right ml-2"></i></h6>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Card -->
+<div class="container">
+  <div
+    *ngFor="let card of cardData"
+    class="card margin col-3 col-xs-6 col-sm-6"
+  >
+    <div (click)="changeView(card?.redirecionPage)">
+      <img class="card-img-top" src="{{ card?.image }}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ card?.title }}</h5>
+        <hr />
+        <p class="card-text">
+          {{ card?.description }}
+        </p>
+        <hr />
+        <a routerLink="/iot" class="link-text">
+          <h6>
+            {{ card?.linkText }} <i class="fas fa-angle-double-right ml-2"></i>
+          </h6>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- Card -->
