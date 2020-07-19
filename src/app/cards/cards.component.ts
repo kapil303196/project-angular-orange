@@ -8,6 +8,36 @@ import {Router} from '@angular/router';
 })
 export class CardsComponent implements OnInit {
 
+  cardData = [
+    {
+      image: '../../assets/website-design.png',
+      title: 'Web Design',
+      description: 'Web Design Services',
+      linkText: 'Read More',
+      redirecionPage: 'webdesign'
+    },
+    {
+      image: '../../assets/app-development.png',
+      title: 'Mobile App Development',
+      description: 'Mobile App Development Services',
+      linkText: 'Read More',
+      redirecionPage: 'mobileappdevelopment'
+    },
+    {
+      image: '../../assets/code.png',
+      title: 'Web Development',
+      description: 'Web Development Services',
+      linkText: 'Read More',
+      redirecionPage: 'webdevelopment'
+    },
+    {
+      image: '../../assets/iot-card.png',
+      title: 'IOT',
+      description: 'IOT Services',
+      linkText: 'Read More',
+      redirecionPage: 'iot'
+    },
+  ]
   constructor(private router: Router) { }
 
   ngOnInit(): void {
