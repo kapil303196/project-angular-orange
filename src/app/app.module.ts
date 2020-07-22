@@ -25,6 +25,8 @@ import { IotComponent } from './iot/iot.component';
 import { MobileAppDevelopmentComponent } from './mobile-app-development/mobile-app-development.component';
 import { WebDesignComponent } from './web-design/web-design.component';
 import { WebDevelopmentComponent } from './web-development/web-development.component';
+import { DndDirective } from './dnd.directive';
+import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
     IotComponent,
     MobileAppDevelopmentComponent,
     WebDesignComponent,
-    WebDevelopmentComponent
+    WebDevelopmentComponent,
+    DndDirective,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
