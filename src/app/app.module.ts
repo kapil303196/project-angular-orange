@@ -27,6 +27,7 @@ import { WebDesignComponent } from './web-design/web-design.component';
 import { WebDevelopmentComponent } from './web-development/web-development.component';
 import { DndDirective } from './dnd.directive';
 import { ProgressComponent } from './progress/progress.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ProgressComponent } from './progress/progress.component';
     WebDesignComponent,
     WebDevelopmentComponent,
     DndDirective,
-    ProgressComponent
+    ProgressComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +69,7 @@ import { ProgressComponent } from './progress/progress.component';
       { path: 'mobile-app-development', component: MobileAppDevelopmentComponent },
       { path: 'web-development', component: WebDevelopmentComponent },
       { path: 'iot', component: IotComponent },
+      { path: 'table', component: TableComponent },
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
