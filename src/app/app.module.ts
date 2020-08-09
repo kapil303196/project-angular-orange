@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
@@ -27,6 +27,11 @@ import { WebDesignComponent } from './web-design/web-design.component';
 import { WebDevelopmentComponent } from './web-development/web-development.component';
 import { DndDirective } from './dnd.directive';
 import { ProgressComponent } from './progress/progress.component';
+import { TableComponent } from './table/table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -47,7 +52,8 @@ import { ProgressComponent } from './progress/progress.component';
     WebDesignComponent,
     WebDevelopmentComponent,
     DndDirective,
-    ProgressComponent
+    ProgressComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,11 @@ import { ProgressComponent } from './progress/progress.component';
     FormsModule,
     SliderModule,
     HomeModule,
+    MatPaginatorModule,
+    MatTableModule,
+    HttpClientModule,
+    MatInputModule,
+    MatSortModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
@@ -67,11 +78,12 @@ import { ProgressComponent } from './progress/progress.component';
       { path: 'mobile-app-development', component: MobileAppDevelopmentComponent },
       { path: 'web-development', component: WebDevelopmentComponent },
       { path: 'iot', component: IotComponent },
+      { path: 'table', component: TableComponent },
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
-   ])
-  ],      
+    ])
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
