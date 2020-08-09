@@ -1,7 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator } from '@angular/material/paginator';
-import {MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+export interface UserData {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-table',
@@ -11,36 +19,60 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class TableComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'description', 'url'];
-  newData: any = [];
+  // dataSource: any = [];
+  dataSource: MatTableDataSource<UserData>;
+
   // dataSource = ELEMENT_DATA;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  // gitUrl = 'https://api.github.com/users/kapil303196/repos';
-  
-  constructor( private http: HttpClient) {}
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+  constructor(private http: HttpClient) {
+    // this.getData();
+    this.http.get('https://api.github.com/users/kapil303196/repos').subscribe(data => {
+      const newdata: any = data;
+      this.dataSource = new MatTableDataSource(newdata);
+      console.log('data', this.dataSource)
+      if (this.dataSource) {
+        this.pagingSort();
+      }
+    }
+    );
+  }
 
   ngOnInit(): void {
-    this.getData();
+    // this.dataSource.paginator = this.paginator;
+    // this.dataSource.sort = this.sort;
   }
 
-  getData() {
-    this.http.get('https://api.github.com/users/kapil303196/repos').subscribe(data => {
-      this.newData = data;
-      console.log('data', this.newData)
-    } 
-    );
-    
-  }
-  // const ELEMENT_DATA: PeriodicElement[] = newData;
   // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  //   this.dataSource.sort = this.sort;
+  //   if (this.dataSource) {
+  //     this.dataSource.paginator = this.paginator;
+  //     this.dataSource.sort = this.sort;
+  //   }
   // }
 
-  applyFilter(filterValue) {
-    filterValue = filterValue.trim(); // Remove whitespace
-    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.newData.filter = filterValue;
+  pagingSort() {
+    if (this.dataSource) {
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    }
   }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+  // getData() {
+  //   this.http.get('https://api.github.com/users/kapil303196/repos').subscribe(data => {
+  //     const newdata: any = data;
+  //     this.dataSource = new MatTableDataSource(newdata);
+  //     console.log('data', this.dataSource)
+  //   }
+  //   );
+  // }
 
 }

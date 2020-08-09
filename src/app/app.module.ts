@@ -30,6 +30,8 @@ import { ProgressComponent } from './progress/progress.component';
 import { TableComponent } from './table/table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatTableModule,
     HttpClientModule,
+    MatInputModule,
+    MatSortModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
