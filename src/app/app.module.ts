@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
@@ -28,6 +28,8 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
 import { DndDirective } from './dnd.directive';
 import { ProgressComponent } from './progress/progress.component';
 import { TableComponent } from './table/table.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,9 @@ import { TableComponent } from './table/table.component';
     FormsModule,
     SliderModule,
     HomeModule,
+    MatPaginatorModule,
+    MatTableModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'consulting', component: ConsultingComponent },
@@ -73,8 +78,8 @@ import { TableComponent } from './table/table.component';
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
-   ])
-  ],      
+    ])
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
