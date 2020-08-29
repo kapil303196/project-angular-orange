@@ -28,9 +28,18 @@ export class TableComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     // this.getData();
-    this.http.get('https://api.github.com/users/kapil303196/repos').subscribe(data => {
-      const newdata: any = data;
-      this.dataSource = new MatTableDataSource(newdata);
+    this.http.get('https://api.github.com/users/soacs/repos').subscribe(data => {
+      let newdata: any = data;
+      console.log("data",data);
+      let d = newdata.map((d, index) => {
+        console.log("index",index)
+        return {
+          index: index + 1,
+          ...d
+        }
+      })
+      console.log("d",d)
+      this.dataSource = new MatTableDataSource(d);
       console.log('data', this.dataSource)
       if (this.dataSource) {
         this.pagingSort();

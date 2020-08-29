@@ -10,7 +10,7 @@
   <!-- Id Column -->
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{element.index}} </mat-cell>
   </ng-container>
 
   <!-- Name Column -->
@@ -28,7 +28,7 @@
   <!-- URL Column -->
   <ng-container matColumnDef="url">
     <mat-header-cell *matHeaderCellDef mat-sort-header> URL </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.clone_url}} </mat-cell>
+    <mat-cell *matCellDef="let element"> <a href="{{element.clone_url}}" target="_blank">{{element.clone_url}}</a></mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
