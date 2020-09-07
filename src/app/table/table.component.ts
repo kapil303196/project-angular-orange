@@ -34,8 +34,8 @@ export class TableComponent implements OnInit {
       let d = newdata.map((d, index) => {
         console.log("index",index)
         return {
-          index: index + 1,
-          ...d
+          ...d,
+          id: index + 1
         }
       })
       console.log("d",d)
