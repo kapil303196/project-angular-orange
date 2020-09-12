@@ -1,46 +1,54 @@
-<div class="example-header">
-    <!-- <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter"> -->
+<div class="padding-1">
+  <div class="example-header">
     <mat-form-field class="example-full-width">
       <mat-label>Filter</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+      <input matInput (keyup)="applyFilter($event)" placeholder="Filter" />
     </mat-form-field>
+  </div>
+
+  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>
+        Description
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.description }} </mat-cell>
+    </ng-container>
+
+    <!-- URL Column -->
+    <ng-container matColumnDef="url">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> URL </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <a href="{{ element.clone_url }}" target="_blank">{{
+          element.clone_url
+        }}</a></mat-cell
+      >
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    class="margin-bottom-1"
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator>
 </div>
-
-<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-  <!-- Id Column -->
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-  </ng-container>
-
-  <!-- Description Column -->
-  <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
-  </ng-container>
-
-  <!-- URL Column -->
-  <ng-container matColumnDef="url">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> URL </mat-header-cell>
-    <mat-cell *matCellDef="let element"> <a href="{{element.clone_url}}" target="_blank">{{element.clone_url}}</a></mat-cell>
-  </ng-container>
-
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-
-  <!-- <tr class="mat-row" *matNoDataRow> -->
-    <!-- <mat-row class="mat-cell" colspan="4">No data matching the filter "{{input?.value}}"</mat-row> -->
-  <!-- </tr> -->
-</mat-table>
-
-<mat-paginator #paginator
-  [length]="100"
-  [pageSize]="10"
-  [pageSizeOptions]="[5, 10, 25, 100]">
-</mat-paginator>

@@ -1,7 +1,7 @@
-table{
-    width: 70%;
-}
 
+.margin-bottom-1 {
+  margin: 1em;
+}
 .example-container {
     display: flex;
     flex-direction: column;
@@ -26,4 +26,35 @@ table{
   
   .example-full-width {
     width: 100%;
+  }
+
+  .padding-1 {
+    padding: 2em;
+  }
+  
+  .mat-column-id{
+    max-width: 7em;
+  }
+  .mat-column-name{
+    max-width: 20em;
+  }
+  .mat-row:hover{
+    background-color: #ff6000;
+    color: white;
+    font-weight: 500;
+  }
+  a:hover{
+    color: white;
+  }
+  .mat-table {
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 15px;
+  }
+  .mat-header-row {
+    background-color: #e5e5e5;
+  }
+  .mat-header-row:hover {
+    background-color: #747171;
+    color: white;
   }

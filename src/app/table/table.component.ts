@@ -28,6 +28,12 @@ export class TableComponent implements OnInit {
 
   constructor(private http: HttpClient) {
     // this.getData();
+  }
+
+  ngOnInit(): void {
+    this.getGithubData()
+  }
+  getGithubData() {
     this.http.get('https://api.github.com/users/soacs/repos').subscribe(data => {
       let newdata: any = data;
       console.log("data",data);
@@ -47,19 +53,6 @@ export class TableComponent implements OnInit {
     }
     );
   }
-
-  ngOnInit(): void {
-    // this.dataSource.paginator = this.paginator;
-    // this.dataSource.sort = this.sort;
-  }
-
-  // ngAfterViewInit() {
-  //   if (this.dataSource) {
-  //     this.dataSource.paginator = this.paginator;
-  //     this.dataSource.sort = this.sort;
-  //   }
-  // }
-
   pagingSort() {
     if (this.dataSource) {
       this.dataSource.paginator = this.paginator;
@@ -74,14 +67,4 @@ export class TableComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
-  // getData() {
-  //   this.http.get('https://api.github.com/users/kapil303196/repos').subscribe(data => {
-  //     const newdata: any = data;
-  //     this.dataSource = new MatTableDataSource(newdata);
-  //     console.log('data', this.dataSource)
-  //   }
-  //   );
-  // }
-
 }
