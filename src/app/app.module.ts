@@ -32,7 +32,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
-
+import { VideosComponent } from './videos/videos.component';
+import { FilterPipe } from './videos/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,9 @@ import {MatSortModule} from '@angular/material/sort';
     WebDevelopmentComponent,
     DndDirective,
     ProgressComponent,
-    TableComponent
+    TableComponent,
+    VideosComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import {MatSortModule} from '@angular/material/sort';
       { path: 'web-development', component: WebDevelopmentComponent },
       { path: 'iot', component: IotComponent },
       { path: 'table', component: TableComponent },
+      { path: 'videos', component: VideosComponent },
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },

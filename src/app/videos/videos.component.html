@@ -1,0 +1,66 @@
+<!-- <header></header> -->
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-orange-color" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <!-- Collapsible content -->
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href=""></a>
+    </mdb-navbar-brand>
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="/table" class="nav-link waves-light" mdbWavesEffect>Tables</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/videos" class="nav-link waves-light" mdbWavesEffect>Videos</a>
+        </li>
+      </ul>
+      <!-- Links -->
+  
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
+
+  
+<!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe> -->
+
+<!-- <md-input #myInput placeholder="Item name..." [(ngModel)]="name" (input)="filterItem(myInput.value)"></md-input>
+
+<div *ngFor="let item of filteredItems">
+   {{item.name}}
+</div> -->
+
+<!-- Search form -->
+<!-- <form class="form-inline waves-light" mdbWavesEffect>
+    <div class="md-form mt-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    </div>
+</form> -->
+<div class="m-3">
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+
+<div class="videos-content-bx">
+    <div class="videos-render-bx" *ngFor="let data of videosList | FilterPipe: searchText">
+        <div class="video-thumbnails-images-bx">
+            <a class="thumbnails-image-view" target="_blank">
+                <img class="thumbnails-images" src={{data.image}}>
+            </a>
+        </div>
+        <div class="video-thumbnails-details-bx">
+            <h1 class="video-heading-title">
+                <strong>{{data.title}}</strong>
+            </h1>
+            <h5 class="video-sub-title">
+                <p>{{data.subtitle}}</p>
+            </h5>
+        </div>
+    </div>
+</div>
+</div>
