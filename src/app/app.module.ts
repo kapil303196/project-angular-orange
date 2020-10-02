@@ -34,6 +34,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
 import { VideosComponent } from './videos/videos.component';
 import { FilterPipe } from './videos/filter.pipe';
+
+// import { YoutubePlayerModule } from 'ngx-youtube-player';
+import {YouTubePlayerModule} from '@angular/youtube-player';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +66,7 @@ import { FilterPipe } from './videos/filter.pipe';
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
+    YouTubePlayerModule,
     FormsModule,
     SliderModule,
     HomeModule,
