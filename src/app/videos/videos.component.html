@@ -57,12 +57,13 @@
   />
   <div class="videos-content-bx">
     <div
-      class="videos-render-bx col-md-12 col-6 row"
+      class="videos-render-bx row"
       *ngFor="let data of videosList"
     >
-      <div class="col-md-6 col-6">
+      <div class="col-md-5 col-5">
         <youtube-player
           videoId="{{ data.videoId }}"
+          [width]="570"
         >
         </youtube-player>
       </div>
