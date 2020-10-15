@@ -55,19 +55,22 @@
     autocomplete="off"
     placeholder="Search"
   />
-  <div class="videos-content-bx">
+  <div class="videos-content-bx container">
     <div
-      class="videos-render-bx row"
+      class="row justify-content-md-center mb-5"
       *ngFor="let data of videosList"
     >
-      <div class="col-md-5 col-5">
-        <youtube-player
-          videoId="{{ data.videoId }}"
-          [width]="500"
-        >
-        </youtube-player>
+      <div class="col-md-5 col-sm-6">
+        <!-- <div class="video-player" *ngIf="videoId === data.videoId" style="height: 360px;">
+          <youtube-player
+          *ngIf="videoId === data.videoId"
+            videoId="{{ data.videoId }}"
+          >
+          </youtube-player>
+        </div> -->
+        <img class="img-fluid" routerLink="/player/{{data.videoId}}" (click)="playVideo(data)" src="{{data.image}}" />
       </div>
-      <div class="video-thumbnails-details-bx col-md-6 col-6">
+      <div class="video-thumbnails-details-bx col-sm-4 col-md-6">
         <h1 class="video-heading-title">
           <strong>{{ data.title }}</strong>
         </h1>

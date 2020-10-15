@@ -37,6 +37,7 @@ import { FilterPipe } from './videos/filter.pipe';
 
 // import { YoutubePlayerModule } from 'ngx-youtube-player';
 import {YouTubePlayerModule} from '@angular/youtube-player';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
     ProgressComponent,
     TableComponent,
     VideosComponent,
-    FilterPipe
+    FilterPipe,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -88,6 +90,7 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
       { path: 'iot', component: IotComponent },
       { path: 'table', component: TableComponent },
       { path: 'videos', component: VideosComponent },
+      { path: 'player/:id', component: PlayerComponent },
       { path: '', component: SliderComponent },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
