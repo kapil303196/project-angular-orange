@@ -30,6 +30,13 @@
     color: darkseagreen;
     background: #e5e5e5;
     color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    background-color: darkgrey;
+    color: white;
 }
 
 .footer-title-bx {
@@ -63,7 +70,9 @@ footer.page-footer a {
         width: 2.25rem !important;
         height: 2.25rem !important;
     }
-
+    .footer-copyright-bx {
+        position: relative;
+    }
 }
 
 html, body { height: 100%; }
